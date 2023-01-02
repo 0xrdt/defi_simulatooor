@@ -31,7 +31,7 @@ This app simulates defi strategies in which you:
 - you'll pay off your debt and keep the rest
 - your profit will be given by the amount left after paying off the debt - the amount you initially deposited
 
-You can also use this app to simulate simpler strategies if you:
+You can also use this app to simulate simpler strategies:
 - set the leverage to 0 to ignore the lending and borrowing part (e.g. liquidity pool farming with no leverage)
 - set the liquidity pool ratio to 10¨% to ignore the conversion to liquidity pool tokens (e.g. leveraged farming a single token)
 - set the APY to 0% to simulate only the borrowing costs

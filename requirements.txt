@@ -3,3 +3,4 @@ pandas
 plotly
 shroomdk
 scipy
+watchdog

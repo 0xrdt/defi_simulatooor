@@ -522,20 +522,20 @@ with st.expander("1 output vs 2 parameters:"):
         parameters[choosen_parameter_2] = parameter_2
         return simulate(parameters)[choosen_output]
 
+    vec_param_1 = np.arange(min_param_1, max_param_1, step_size_1)
+    vec_param_2 = np.arange(min_param_2, max_param_2, step_size_2)
+    z = [
+        [
+            output_per_parameters(
+                x, y, choosen_parameter_1, choosen_parameter_2, choosen_output
+            )
+            for x in vec_param_1
+        ]
+        for y in vec_param_2
+    ]
     if st.checkbox("Show 3D plot", value=True):
         # plot surface
         fig = go.Figure()
-        vec_param_1 = np.arange(min_param_1, max_param_1, step_size_1)
-        vec_param_2 = np.arange(min_param_2, max_param_2, step_size_2)
-        z = [
-            [
-                output_per_parameters(
-                    x, y, choosen_parameter_1, choosen_parameter_2, choosen_output
-                )
-                for x in vec_param_1
-            ]
-            for y in vec_param_2
-        ]
         fig.add_trace(
             go.Surface(
                 x=vec_param_1,
